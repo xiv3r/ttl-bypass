@@ -8,6 +8,11 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 - ssh: `ssh root@192.168.1.1`
 - telnet: `telnet 192.168.1.1`
 
+# Install
+```
+wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft
+```
+
 # Config
 - Path: `/etc/nftables.d/ttl64.nft`
 
