@@ -1,6 +1,10 @@
 # ttl-bypass
 Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspot sharing using openwrt router.
 
+<div align="center">
+<img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
+</div>
+
 # Req
 - Openwrt Router (`extender/repeater mode`) must be connected to pisowifi
 
