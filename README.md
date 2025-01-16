@@ -5,8 +5,11 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 <img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
 </div>
 
+# Support
+- works both WAN and WLAN (extender)
+
 # Req
-- Openwrt Router (`extender/repeater mode`) must be connected to pisowifi
+- Openwrt Router (`extender/repeater mode`) must be connected to the pisowifi
 
 # Access ssh or telnet
 - ssh: `ssh root@192.168.1.1`
