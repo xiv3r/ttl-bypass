@@ -6,7 +6,8 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 </div>
 
 # Support
-- works both WAN and WLAN (extender)
+- Works both WAN and WLAN (extender)
+- Nftables Chain Mangle Prerouting
 
 # Req
 - Openwrt Router (`extender/repeater mode`) must be connected to the pisowifi
@@ -31,11 +32,11 @@ chain mangle_prerouting_ttl64 {
 ```
 <details><summary></summary>
   
-# Run in CLI
+# Run in ssh CLI
 ```
 wget -qO- https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.sh | sh
 ```
-# Openwrt CLI
+# Openwrt ssh CLI
 ```sh
 # Create the chain
 nft add chain ip mangle mangle_prerouting_ttl64 { type filter hook prerouting priority 300; policy accept; }
