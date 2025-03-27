@@ -7,10 +7,10 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 
 # Support
 - Works both WAN and WLAN (extender)
-- Nftables Chain Mangle Prerouting
+- Support Ipv4 & Ipv6
 
-# Req
-- Openwrt Router (`extender/repeater mode`) must be connected to the pisowifi
+# Requirement
+- Openwrt Router (`extender/repeater mode`) must be connected to a wifi with TTL value of 1
 
 # Access ssh or telnet
 - ssh: `ssh root@192.168.1.1`
