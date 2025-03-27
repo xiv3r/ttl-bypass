@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 
 # Create the chain
 nft add chain ip mangle mangle_prerouting_ttl64 { type filter hook prerouting priority 300; policy accept; }
