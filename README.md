@@ -12,7 +12,13 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 # Requirement
 - Openwrt Router (`extender/repeater mode`) must be connected to a wifi with TTL value of 1
 
-# Access ssh or telnet
+# Check the WIFI access point ttl value
+
+```
+ping 10.0.0.1
+```
+
+# Access Openwrt router ssh or telnet
 - ssh: `ssh root@192.168.1.1`
 - telnet: `telnet 192.168.1.1`
 
@@ -20,8 +26,8 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 ```
 wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
-# Openwrt Config
-- Path: `vim /etc/nftables.d/ttl64.nft`
+# Result 
+- Path: `cat /etc/nftables.d/ttl64.nft`
 
 ```sh
 chain mangle_prerouting_ttl64 {
