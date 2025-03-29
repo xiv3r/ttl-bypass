@@ -25,9 +25,9 @@ wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-by
 
 ```sh
 chain mangle_prerouting_ttl64 {
-  type filter hook prerouting priority 300; policy accept;
-   counter ip ttl set 64
-   counter ip6 hoplimit set 64
+    type filter hook prerouting priority 300; policy accept;
+    ip ttl set 64
+    ip6 hoplimit set 64
 }
 ```
 <details><summary></summary>
