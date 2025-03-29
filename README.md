@@ -1,5 +1,5 @@
 # ttl-bypass
-Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspot sharing using openwrt router.
+Simple nftables config that can bypass any wifi anti-tethering & anti-hotspot sharing using openwrt router.
 
 <div align="center">
 <img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
