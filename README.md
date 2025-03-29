@@ -25,10 +25,16 @@ wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-by
 
 ```sh
 chain mangle_prerouting_ttl64 {
-    type filter hook prerouting priority 300; policy accept;
-    ip ttl set 64
-    ip6 hoplimit set 64
-}
+                type filter hook prerouting priority 300; policy accept;
+                ip ttl set 64
+                ip6 hoplimit set 64
+        }
+
+chain mangle_postrouting_ttl64 {
+                type filter hook postrouting priority 300; policy accept;
+                ip ttl set 64
+                ip6 hoplimit set 64
+        }
 ```
 <details><summary></summary>
   
@@ -39,8 +45,17 @@ wget -qO- https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl
 # Openwrt ssh CLI
 ```sh
 nft 'add table inet mangle'
+
 nft 'add chain inet mangle mangle_prerouting_ttl64 { type filter hook prerouting priority 300; policy accept; }'
+
 nft 'add rule inet mangle mangle_prerouting_ttl64 ip ttl set 64'
+
 nft 'add rule inet mangle mangle_prerouting_ttl64 ip6 hoplimit set 64'
+
+nft 'add chain inet mangle mangle_postrouting_ttl64 { type filter hook postrouting priority 300; policy accept; }'
+
+nft 'add rule inet mangle mangle_postrouting_ttl64 ip ttl set 64'
+
+nft 'add rule inet mangle mangle_postrouting_ttl64 ip6 hoplimit set 64'
 ```
 </details>
