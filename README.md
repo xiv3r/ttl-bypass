@@ -6,7 +6,7 @@ Simple nftables config that can bypass any wifi anti-tethering & anti-hotspot sh
 </div>
 
 # Support
-- Works both WAN and WLAN (extender)
+- Works both WAN and WLAN (extender/repeater/wireless bridge)
 - Support Ipv4 & Ipv6
 
 # Requirement
