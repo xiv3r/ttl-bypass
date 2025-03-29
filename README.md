@@ -21,7 +21,7 @@ Simple nftables config that can bypass any pisowifi anti-tethering & anti-hotspo
 wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
 # Openwrt Config
-- Path: `/etc/nftables.d/ttl64.nft`
+- Path: `vim /etc/nftables.d/ttl64.nft`
 
 ```sh
 chain mangle_prerouting_ttl64 {
