@@ -28,7 +28,7 @@ ping 10.0.0.1
 wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
 # Result 
-- Path: `cat /etc/nftables.d/ttl64.nft`
+- Path: `vim /etc/nftables.d/ttl64.nft`
 
 ```sh
 chain mangle_prerouting_ttl64 {
