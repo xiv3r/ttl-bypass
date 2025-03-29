@@ -8,9 +8,10 @@ Simple nftables config that can bypass any wifi anti-tethering & anti-hotspot sh
 # Support
 - Works both WAN and WLAN (extender/repeater/wireless bridge)
 - Support Ipv4 & Ipv6
+- Force all the ttl value of 1 arrived in any interface are set to 64
 
 # Requirement
-- Openwrt Router (`extender/repeater mode`) must be connected to a wifi with TTL value of 1
+- Openwrt Router configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
 
 # Check the WIFI access point ttl value
 
