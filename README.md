@@ -1,8 +1,20 @@
 # ttl-bypass
 Simple nftables config that can bypass any wifi anti-tethering & anti-hotspot sharing using openwrt router.
 
+<br>
+
 <div align="center">
-<img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
+Wifi AP 10.0.0.1/20 ttl=1
+
+  👇
+
+Openwrt extender with nft ttl generator
+
+👇
+
+10.0.0.1/20 ttl=64
+  
+  <img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
 <img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
   
 </div>
