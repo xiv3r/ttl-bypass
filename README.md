@@ -1,4 +1,5 @@
-# ttl-bypass
+<h1 align ="center"> $${\color{cyan}TTL-Bypass}$$ </h1>
+
 Simple nftables config that can bypass any wifi anti-tethering & anti-hotspot sharing using openwrt router.
 
 <br>
@@ -19,29 +20,18 @@ Openwrt extender with nft ttl generator
   
 </div>
 
-# Support
-- Works both WAN and WLAN (extender/repeater/wireless bridge)
-- Support Ipv4 & Ipv6
-- Force all the ttl value of 1 arrived in any interface are set to 64
+# $${\color{orange}Requirements}$$
+- Openwrt Router => configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
 
-# Requirement
-- Openwrt Router configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
-
-# Check the WIFI access point ttl value
-
-```
-ping 10.0.0.1
-```
-
-# Access Openwrt router ssh or telnet
+# $${\color{orange}SSH/TELNET}$$
 - ssh: `ssh root@192.168.1.1`
 - telnet: `telnet 192.168.1.1`
 
-# Install Permanently
+# $${\color{orange}Install}$$
 ```
 wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
-# Result 
+# $${\color{orangeh1}Results}$$
 - Path: `vim /etc/nftables.d/ttl64.nft`
 
 ```sh
