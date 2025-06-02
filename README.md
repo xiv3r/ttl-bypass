@@ -1,4 +1,4 @@
-# TTL-Bypass
+# TTL Bypass
 
 Simple nftables ttl config that can bypass any wifi anti-tethering and anti-hotspot sharing using openwrt router.
 
