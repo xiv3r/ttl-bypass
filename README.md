@@ -1,4 +1,4 @@
-# TTL Bypass
+# TTL Bypass for openwrt wireless extender 
 
 Simple nftables ttl config that can bypass any wifi anti-tethering and anti-hotspot sharing using openwrt router.
 
@@ -14,9 +14,9 @@ Openwrt extender with nftables ttl generator
 👇
 
 Users 10.0.0.1/20 ttl=64
-  
-<img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
-<img width="50%" height="50%" src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
+
+<img src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
+<img src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
   
 </div>
 
