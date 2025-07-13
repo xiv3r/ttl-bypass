@@ -5,15 +5,16 @@ Simple nftables ttl config that can bypass any wifi anti-tethering and anti-hots
 <br>
 
 <div align="center">
-Wifi Station 10.0.0.1/20 ttl=1
+SOURCE: 10.0.0.1/20 ttl=1
 
   👇
 
 Openwrt extender with nftables ttl generator
+(ip ttl set 64)
 
 👇
 
-Users 10.0.0.1/20 ttl=64
+DESTINATION: 10.0.0.1/20 ttl=64
 
 <img src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
 <img src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
