@@ -50,6 +50,12 @@ chain mangle_postrouting_ttl64 {
         }
 ```
 
+# To check
+> ping the gateway 10.0.0.1
+```
+ping 10.0.0.1
+```
+
 <details><summary></summary>
   
 # Run in ssh CLI
