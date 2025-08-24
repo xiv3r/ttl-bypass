@@ -28,8 +28,9 @@ DESTINATION: 10.0.0.1/20 ttl=64
 # SSH or Telnet
 - SSH: `ssh root@192.168.1.1`
 - Telnet: `telnet 192.168.1.1`
-user:`root`
-password:`(admin password)`
+> user:`root`
+> 
+> password:`(admin password)`
 
 # Install
 > persistent
