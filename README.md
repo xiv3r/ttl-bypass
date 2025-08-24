@@ -58,9 +58,24 @@ chain mangle_prerouting_ttl64 {
 ping 10.0.0.1
 ```
 
+<details><summary>
+
+# For Iptables (optional)
+</summary>
+
+> persistent
+```
+vi /etc/rc.local
+```
+> place before the `exit 0`
+```
+iptables -t mangle -A PREROUTING -j TTL --ttl-set 64
+```
+</details>
+
 <details><summary></summary>
   
-# For CLI
+# For CLI (optional)
 > optional
 ```
 wget -qO- https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.sh | sh
