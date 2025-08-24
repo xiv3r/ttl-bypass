@@ -22,7 +22,8 @@ DESTINATION: 10.0.0.1/20 ttl=64
 </div>
 
 # Requirements
-- Openwrt Router => configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
+- Openwrt Router
+> configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
 
 # SSH or Telnet
 - SSH: `ssh root@192.168.1.1`
@@ -33,10 +34,14 @@ password:`(admin password)`
 # Install
 > persistent
 ```
-wget -O /etc/nftables.d/ttl64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
+wget -O /etc/nftables.d/ttl-64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
-# config
-> Path: `vim /etc/nftables.d/ttl64.nft`
+# Uninstall
+```
+rm -f /etc/nftables.d/ttl-64.nft && /etc/init.d/firewall restart
+```
+# Config
+> Path: `vim /etc/nftables.d/ttl-64.nft`
 
 ```
 chain mangle_prerouting_ttl64 {
@@ -46,7 +51,7 @@ chain mangle_prerouting_ttl64 {
         }
 ```
 
-# To check
+# To Check
 > ping the gateway 10.0.0.1
 ```
 ping 10.0.0.1
@@ -54,7 +59,7 @@ ping 10.0.0.1
 
 <details><summary></summary>
   
-# Run in ssh CLI
+# For CLI
 > optional
 ```
 wget -qO- https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.sh | sh
@@ -73,7 +78,7 @@ nft 'add rule inet mangle mangle_prerouting_ttl64 ip ttl set 64'
 nft 'add rule inet mangle mangle_prerouting_ttl64 ip6 hoplimit set 64'
 ```
 
-# Check the rules
+# Check the rulesets
 ```
 nft list ruleset
 ```
