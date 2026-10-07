@@ -5,16 +5,16 @@ Simple nftables ttl config that can bypass any wifi anti-tethering and anti-hots
 <br>
 
 <div align="center">
-SOURCE: 10.0.0.1/20 ttl=1
+SOURCE ACCESS POINT TTL: 10.0.0.1/20 ttl=1
 
   👇
 
-Openwrt extender with nftables ttl generator
+Openwrt extender with nftables ttl 64 prerouting
 (ip ttl set 64)
 
 👇
 
-DESTINATION: 10.0.0.1/20 ttl=64
+OPENWRT ROUTER ping: 10.0.0.1 ttl=64
 
 <img src="https://github.com/xiv3r/ttl-bypass/blob/main/fw4-firewall.png">
 <img src="https://github.com/xiv3r/ttl-bypass/blob/main/ttl.png">
