@@ -21,10 +21,6 @@ DESTINATION: 10.0.0.1/20 ttl=64
   
 </div>
 
-# Requirements
-- Openwrt Router
-> configured as (`extender/repeater/wireless bridge mode`) must be connected to a wifi with TTL value of 1
-
 # SSH or Telnet
 - SSH: `ssh root@192.168.1.1`
 - Telnet: `telnet 192.168.1.1`
@@ -33,7 +29,7 @@ DESTINATION: 10.0.0.1/20 ttl=64
 > password:`(admin password)`
 
 # Install
-> persistent
+> First configure the Openwrt Router into (`extender/repeater/wireless bridge mode`) before connecting to the wifi access point with TTL=1
 ```
 wget -O /etc/nftables.d/ttl-64.nft https://raw.githubusercontent.com/xiv3r/ttl-bypass/refs/heads/main/ttl64.nft && fw4 check && /etc/init.d/firewall restart
 ```
@@ -50,6 +46,10 @@ chain mangle_prerouting_ttl64 {
                 ip ttl set 64
                 ip6 hoplimit set 64
         }
+```
+> after set restart the firewall to apply
+```
+/etc/init.d/firewall restart
 ```
 
 # To Check
